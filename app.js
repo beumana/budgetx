@@ -74,6 +74,20 @@ var uiController = (function(){
                 value: document.querySelector(DOMstrings.inputValue).value
             };
         },
+        addListItem: function(obj, type){
+            var html;
+            // Create HTML string with placeholder text
+            if (type = 'income') {
+                html = '<div class="item clearfix" id="income-0"><div class="item__description">Salary</div><div class="right clearfix"><div class="item__value">+ 2,100.00</div><div class="item__delete"><button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button></div></div></div>';
+            } else if (type = 'expense') {
+                html = '<div class="item clearfix" id="expense-0"><div class="item__description">Apartment rent</div><div class="right clearfix"><div class="item__value">- 900.00</div><div class="item__percentage">21%</div><div class="item__delete"><button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button></div></div></div>'
+            }
+
+            // Replace the placeholder text with some actual data
+
+            // Insert HTML into DOM
+
+        },
         getDOMstrings: function() {
             return DOMstrings;
         }
